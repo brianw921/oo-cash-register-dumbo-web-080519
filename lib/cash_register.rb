@@ -24,7 +24,7 @@ end
 
   def apply_discount
      if @discount > 0
-       discounted = (price * discount)/100
+       discounted = (price * @discount)/100
        @total -= discounted
        return "After the discount, the total comes to $#{total}."
      else
