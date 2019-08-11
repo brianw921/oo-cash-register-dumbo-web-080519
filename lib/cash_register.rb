@@ -11,15 +11,15 @@ end
 def add_item(item, price, quantity = 1)
   @price = price
   @total += price * quantity
-  # if quantity > 1
-  #   i = 0
-  #   while i < quantity
-  #     @items << item
-  #     i += 1
-  #   end
-  # else
-  #   @items << item
-  # end
+  if quantity > 1
+    i = 0
+    while i < quantity
+      @items << item
+      i += 1
+    end
+  else
+    @items << item
+  end
 end
 
   def apply_discount
@@ -30,9 +30,5 @@ end
      else
        return "There is no discount to apply."
      end
-   end
-
-   def items(item)
-     @items << item
    end
 end
